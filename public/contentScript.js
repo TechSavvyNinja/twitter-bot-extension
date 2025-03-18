@@ -2,7 +2,7 @@
 console.log("Tweet Boost Buddy content script loaded on:", window.location.href);
 
 // Default OpenAI API key for all extension users
-const DEFAULT_API_KEY = "your-default-api-key"; // Replace this with your actual API key
+const DEFAULT_API_KEY = "sk-FvyGYbQJt3BlbktjZ0mHH9YT3BlbkFJuDrQAbcTfLweN4Tme"; // Replace this with your actual API key
 
 // Helper function to wait for an element to appear on the page
 function waitForElement(selector, timeout = 10000) {

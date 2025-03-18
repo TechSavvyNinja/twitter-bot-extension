@@ -222,7 +222,7 @@ export function ControlPanel() {
           
           <Button 
             variant="outline" 
-            className="w-full" 
+            className="w-full break-words" 
             disabled={isLoading} 
             onClick={handleCheckNewPosts}
           >

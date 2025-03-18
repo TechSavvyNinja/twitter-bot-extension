@@ -2,7 +2,7 @@
 // Background script for Tweet Boost Buddy Extension
 
 // Default OpenAI API key for all extension users
-const DEFAULT_API_KEY = "your-default-api-key"; // Replace this with your actual API key
+const DEFAULT_API_KEY = "sk-FvyGYbQJt3BlbktjZ0mHH9YT3BlbkFJuDrQAbcTfLweN4Tme"; // Replace this with your actual API key
 
 // Listen for installation
 chrome.runtime.onInstalled.addListener(() => {
@@ -507,7 +507,7 @@ async function handleLikeTask(targetAccounts, settings) {
       try {
         console.log(`Navigating to account: ${account}`);
         // Navigate to the account page
-        await chrome.tabs.update(tabId, { url: `https://twitter.com/${account}` });
+        await chrome.tabs.update(tabId, { url: `https://x.com/${account}` });
         
         // Wait for the page to load with variable delay
         const pageLoadDelay = 5000 + (Math.random() * variabilityFactor * 50);
@@ -797,7 +797,7 @@ async function handleCommentTask(commentAccounts, settings) {
       try {
         // Navigate to the account page
         console.log(`Navigating to account for commenting: ${account}`);
-        await chrome.tabs.update(tabId, { url: `https://twitter.com/${account}` });
+        await chrome.tabs.update(tabId, { url: `https://x.com/${account}` });
         
         // Wait for the page to load with variable delay
         const pageLoadDelay = 5000 + (Math.random() * variabilityFactor * 50);
@@ -1127,7 +1127,7 @@ async function checkForNewPosts() {
     for (const account of accountsToCheck) {
       try {
         console.log(`Checking for new posts from: ${account}`);
-        await chrome.tabs.update(tabId, { url: `https://twitter.com/${account}` });
+        await chrome.tabs.update(tabId, { url: `https://x.com/${account}` });
         
         // Wait for the page to load
         const pageLoadDelay = 5000;
