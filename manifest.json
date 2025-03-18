@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Tweet Boost Buddy",
+  "version": "1.0.0",
+  "description": "Automates Twitter actions to boost engagement",
+  "permissions": ["activeTab", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
